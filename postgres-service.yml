@@ -5,8 +5,7 @@ metadata:
   ------: postgresdb
 spec:
   type: ------
-    spec:
-      ports:
-      - port: ------
-      selector:
-        app: ------
+  ports:
+  - port: ------
+  selector:
+    app: ------
