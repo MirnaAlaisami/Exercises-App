@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: todoui
-        image: maeddes/todoui:v1
+        image: mirna/todoui:v1
