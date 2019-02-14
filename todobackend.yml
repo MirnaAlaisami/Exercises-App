@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: todobackend
-        image: mirna/todobackend:v1
+        image: mirna/todobackend:v145
