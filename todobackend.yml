@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: todobackend
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: todobackend
+      labels:
+        app: todobackend
+    spec:
+      containers:
+      - name: todobackend
+        image: mirna/todobackend:v1

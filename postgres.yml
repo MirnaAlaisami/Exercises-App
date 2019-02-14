@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: ------
+metadata:
+  name: postgresdb 
+  namespace: ------
+spec:
+  template:
+    metadata:
+      labels:
+        app: postgresdb
+    spec:
+      volumes:
+        - name: data
+          emptyDir: {}
+      containers:
+       - image: ------
+         name: postgresdb
+         env:
+         - name: POSTGRES_USER
+           valueFrom:
+             secretKeyRef:
+               name: db-security
+               key: db.user.name
+         - name: ------
+           valueFrom:
+             secretKeyRef:
+               name: db-security
+               key: db.user.password
+         - name: ------
+           valueFrom:
+             configMapKeyRef:
+               name: postgres-config
+               key: postgres.db.name 
+         ports:
+         - containerPort: ------
+           name: postgresdb
+         volumeMounts:
+           - name: data
+             mountPath: /var/lib/postgresql/data
+	
