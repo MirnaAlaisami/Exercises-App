@@ -37,4 +37,3 @@ spec:
          volumeMounts:
            - name: data
              mountPath: /var/lib/postgresql/data
-	
