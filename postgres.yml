@@ -21,12 +21,12 @@ spec:
              secretKeyRef:
                name: db-security
                key: db.user.name
-         - name: ------
+         - name: POSTGRES_PASSWORD
            valueFrom:
              secretKeyRef:
                name: db-security
                key: db.user.password
-         - name: ------
+         - name: POSTGRES_DB
            valueFrom:
              configMapKeyRef:
                name: postgres-config
