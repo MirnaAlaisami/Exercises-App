@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ------
 metadata:
-namespace: ------
-name: postgresdb
+  namespace: ------
+  name: postgresdb
 spec:
-type: ------
-ports:
-- port: ------
-selector:
-  app: postgresdb
+  type: ------
+  ports:
+  - port: ------
+  selector:
+    app: postgresdb
